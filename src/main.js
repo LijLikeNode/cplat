@@ -25,9 +25,10 @@ Vue.config.productionTip = false;
 window.ax = ax;
 window.common = common;
 window.popalert = pop;
+// window.baseUrl = 'http://test.hxlife.com/ssj/data_web/';
+window.baseUrl = 'http://pcwebtest.ihxlife.com/data_web/';
 /* eslint-disable no-new */
 
-// listener.back();
 const historyStack = {
     data: {
         history: [],

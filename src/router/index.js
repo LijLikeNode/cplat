@@ -1,16 +1,17 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from '@/view/Home'
-import Market from '@/view/Market'
-import Premium from '@/view/Premium'
-import PremiumDetail from '@/view/PremiumDetail'
-import Channel from '@/view/Channel'
-import Product from '@/view/Product'
-import Quality from '@/view/Quality'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from '@/view/Home';
+import Market from '@/view/Market';
+import Premium from '@/view/Premium';
+import PremiumDetail from '@/view/PremiumDetail';
+import Channel from '@/view/Channel';
+import Product from '@/view/Product';
+import Quality from '@/view/Quality';
+import Regist from '@/view/Regist';
 
-Vue.use(Router)
+Vue.use(Router);
 
- const router = new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -53,7 +54,13 @@ Vue.use(Router)
       name: 'product',
       component: Product,
       meta:{txt:'产品分析'}
-    }
+    },
+    {
+      path: '/regist',
+      name: 'regist',
+      component: Regist,
+      meta:{txt:'注册'}
+    },
   ]
 });
 router.beforeEach((to, from, next) => {

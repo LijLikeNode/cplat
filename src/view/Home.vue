@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-      <h1>保险中介同行业交流平台</h1>
+      <h1>保险中介同业交流平台</h1>
       <ul>
         <li v-for="(item,index) in list" :key="index" @click="to_detail(item.toHref)">
           <h2>{{item.title}}</h2>
@@ -69,6 +69,9 @@ export default {
 
 <style lang='less' scoped>
 @import url(../assets/css/main.less);
+#app div.page{
+  padding-top:0;
+}
 div.page{
   background: url('../assets/img/home/top_banner.png') no-repeat top center;background-size: 100%;
   h1{

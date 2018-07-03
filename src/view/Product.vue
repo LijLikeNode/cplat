@@ -1,6 +1,6 @@
 <template>
     <div class="container page">
-      <HeaderCommon>产品分析</HeaderCommon>
+      <!-- <HeaderCommon>产品分析</HeaderCommon> -->
       <ol class="tab">
         <li :class="[{'active':tab_index==0}]" @click="evn(0)">公司</li>
         <li :class="[{'active':tab_index==1}]" @click="evn(1)">险种</li>

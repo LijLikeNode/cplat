@@ -1,6 +1,6 @@
 <template>
     <div class="container page">
-      <HeaderCommon>渠道分析</HeaderCommon>
+      <!-- <HeaderCommon>渠道分析</HeaderCommon> -->
       <SelectC :opts="selectList" @change="changeCompany" :value="companyName" @changeD="changeDate"></SelectC>
       <div class="con animated flipInX">
         <h2><i></i>当月标保</h2>

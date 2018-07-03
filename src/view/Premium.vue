@@ -1,6 +1,6 @@
 <template>
     <div class="container page">
-      <HeaderCommon>保费分析</HeaderCommon>
+      <!-- <HeaderCommon>保费分析</HeaderCommon> -->
       <SelectC :opts="selectList" @change="changeYear" :value="yearOrMonth" @changeD="changeDate"></SelectC>
 
       <div class="con animated flipInX" v-if="yearOrMonth=='月度'">

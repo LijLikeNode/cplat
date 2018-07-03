@@ -44,7 +44,7 @@
             // }
             // this.endDate = String(year) + String(seperator1) + String(month);
             // this.date = String(year) + String(seperator1) + String(preMonth);
-            console.log(this.date,this.endDate)
+            // console.log(this.date,this.endDate)
             let fs=Math.ceil($(window).width()*0.037*2.4),el=$(this.$refs.ss),_this=this;
                 this.mpk=el.mPicker({
                     level:1,

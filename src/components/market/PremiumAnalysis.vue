@@ -75,7 +75,7 @@ export default {
       getDate(){
         let now = new Date();
         this.current_year = now.getFullYear();
-        this.current_month = now.getMonth()+1;
+        this.current_month = now.getMonth();
       },
     }
 }

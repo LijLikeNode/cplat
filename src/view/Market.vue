@@ -1,6 +1,6 @@
 <template>
     <div class="container page">
-      <HeaderCommon>市场概览</HeaderCommon>
+      <!-- <HeaderCommon>市场概览</HeaderCommon> -->
       <ul class="tab">
         <li :class="[{'active':tab_index==0}]" @click="evn(0)">保费分析</li>
         <li :class="[{'active':tab_index==1}]" @click="evn(1)">产品分析</li>
@@ -37,7 +37,7 @@ export default {
     },
     components:{HeaderCommon,PremiumAnalysis,ProductAnalysis,QualityAnalysis},
     mounted(){
-      ax('dataInterface/appSCGL.do',{affiliation_date:common.getCurDate()}).then(res=>{
+      ax('dataInterface/appSCGL.do',{affiliation_date:common.getPreDate()}).then(res=>{
         if(res.code=='success'){
           this.$store.state.market_data = res.data;
           this.tab_index=0;

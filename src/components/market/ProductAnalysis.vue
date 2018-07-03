@@ -33,7 +33,7 @@
             <span>{{index+1}}</span>
             <span>{{val.name}}</span>
             <span>{{val.product_name}}</span>
-            <span>{{val.y_criterion_premium}}</span>
+            <span>{{val.m_criterion_premium}}</span>
           </li>
         </ul>
         <i>单位：万元</i>
@@ -52,7 +52,7 @@
             <span>{{index+1}}</span>
             <span>{{val.name}}</span>
             <span>{{val.product_name}}</span>
-            <span>{{val.y_criterion_premium}}</span>
+            <span>{{val.m_criterion_premium}}</span>
           </li>
         </ul>
         <i>单位：万元</i>
