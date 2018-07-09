@@ -93,16 +93,16 @@ div.container{
     ul{
       box-shadow:0 1.2*@rex 2*@rex 0 rgba(0,0,0,0.07);
       li{
-        font-size:2.4*@rex;height:6*@rex;line-height: 6*@rex;color:@gray;
+        font-size:2.4*@rex;padding:.8em 0;color:@gray;
         &.title{
-          font-size:2.6*@rex;color:#000000;font-weight:bold;height:7*@rex;line-height: 7*@rex;
+          font-size:2.6*@rex;color:#000000;font-weight:bold;
         }
         &.double{
           background-color: #F9F9F9;
         }
 
         span{
-          display:inline-block;width:23.5%;text-align: center;
+          display:inline-block;width:23.5%;text-align: center;vertical-align:top;
           &:first-child{width:21%;}
           &:nth-child(2){width:21%;}
           &:nth-child(3){width:30.5%;}

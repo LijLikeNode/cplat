@@ -7,7 +7,7 @@
         <h2><i></i>当月标保</h2>
         <ul>
           <li v-for="(val,index) in premium_org_m" :key="$route.params.name+String(index)">
-            <h2><span class="lf">{{val.org}}</span></h2>
+            <h2>{{val.org}}</h2>
             <div class="progress-container">
               <div class="progress-bg lf">
                 <div class="progress" :style="calcWidth(val.m_criterion_premium)"></div>
@@ -140,7 +140,7 @@ export default {
 <style lang='less' scoped>
 @import url(../assets/css/main.less);
 div.container{
-  padding:0 5%;
+  padding:0 5%!important;
   .con{
     position:relative;margin-top:5*@rex;
     h2{
@@ -153,14 +153,17 @@ div.container{
     ul{
       padding-top:3.5*@rex;border-radius:.9*@rex;box-shadow:0 1.2*@rex 2*@rex 0 rgba(0,0,0,0.07);margin-bottom:8*@rex;
       li{
-        font-size:2.4*@rex;height:14.2*@rex;
+        font-size:2.4*@rex;
+        // height:14.2*@rex;
+        // height:14.2*@rex;
 
         span{
           display:inline-block;width:24%;text-align: center;
         }
         .lf{margin-left:4*@rex;}
         h2{
-          height:3.7*@rex;line-height:3.7*@rex;margin-bottom:1*@rex;
+          height:3.7*@rex;line-height:3.7*@rex;display:inline-block;width:20%;font-size:2.6*@rex;vertical-align:top;text-align:center;
+          margin-bottom:0;
           span{
             &.rt{
               color:@gray;font-size:2*@rex;
@@ -171,9 +174,9 @@ div.container{
           }
         }
         div.progress-container{
-          height:3.7*@rex;line-height:3.7*@rex;
+          height:3.7*@rex;line-height:3.7*@rex;width:75%;display:inline-block;margin-top:-.2em;
           div.progress-bg{
-            height:2*@rex;width:47*@rex;background: @progressBg;position:relative;top:.9*@rex;
+            height:2*@rex;width:70%;background: @progressBg;position:relative;top:.9*@rex;margin-left:0;
           }
           div.progress{
             height:2*@rex;width:0;background-image:linear-gradient(-270deg,#2A6FFF,#55C2FF);

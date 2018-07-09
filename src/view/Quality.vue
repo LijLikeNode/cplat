@@ -7,12 +7,12 @@
         <h2><i></i>{{yearOrMonth=='月度'?'当月':'当年'}}13月保费继续率</h2>
         <ul>
           <li v-for="(val,index) in continue_rate_13" :key="String(index)">
-            <h2><span class="lf">{{val.name}}</span></h2>
+            <h2>{{val.name}}</h2>
             <div class="progress-container">
               <div class="progress-bg lf">
                 <div class="progress" :style="calcWidth(val.thirteen_rate,13)"></div>
               </div>
-              <span class="rt">{{val.thirteen_rate}}</span>
+              <span class="rt">{{val.thirteen_rate+'%'}}</span>
             </div>
           </li>
         </ul>
@@ -23,12 +23,12 @@
         <h2><i></i>{{yearOrMonth=='月度'?'当月':'当年'}}25月保费继续率</h2>
         <ul>
           <li v-for="(val,index) in continue_rate_25" :key="String(index)">
-            <h2><span class="lf">{{val.name}}</span></h2>
+            <h2>{{val.name}}</h2>
             <div class="progress-container">
               <div class="progress-bg lf">
                 <div class="progress" :style="calcWidth(val.twentyfive,25)"></div>
               </div>
-              <span class="rt">{{val.twentyfive}}</span>
+              <span class="rt">{{val.twentyfive+'%'}}</span>
             </div>
           </li>
         </ul>
@@ -65,22 +65,38 @@ export default {
       continue_rate_25(){
         return this.$store.state.quality_data.continue_rate_25;
       },
-      // widthMBase(){
-      //   let premuim = this.continue_rate_13;
-      //   let max;
-      //   for(let i in premuim){
-      //     if(max){
-      //       if(premuim[i].m_criterion_premium>max){
-      //         max = premuim[i].m_criterion_premium;
-      //       }
-      //     }else{
-      //       max = premuim[i].m_criterion_premium;
-      //     }
-      //   }
-      //   max/=0.8;
-      //   // console.log(max);
-      //   return max;
-      // },
+      widthMBase(){
+        let premuim = this.continue_rate_13;
+        let max;
+        for(let i in premuim){
+          if(max){
+            if(premuim[i].thirteen_rate>max){
+              max = premuim[i].thirteen_rate;
+            }
+          }else{
+            max = premuim[i].thirteen_rate;
+          }
+        }
+        // max/=0.8;
+        // console.log(max);
+        return max;
+      },
+      width25Base(){
+        let premuim = this.continue_rate_25;
+        let max;
+        for(let i in premuim){
+          if(max){
+            if(premuim[i].twentyfive>max){
+              max = premuim[i].twentyfive;
+            }
+          }else{
+            max = premuim[i].twentyfive;
+          }
+        }
+        // max/=0.8;
+        // console.log(max);
+        return max;
+      },
       // widthYBase(){
       //   let premuim = this.get_premium_org_y;
       //   let max;
@@ -113,10 +129,11 @@ export default {
     methods:{
       calcWidth(val,num){
         if(num==13){
-          // let percent = val/this.widthMBase;
-          return `width:${val*100/100}%`;
+          let percent = val/this.widthMBase;
+          return `width:${percent*100}%`;
         }else{
-          return `width:${val*100/100}%`;
+          let percent = val/this.width25Base;
+          return `width:${percent*100}%`;
         }
       },
       evn(index){
@@ -163,7 +180,7 @@ div.container{
         }
         .lf{margin-left:4*@rex;}
         h2{
-          height:3.7*@rex;line-height:3.7*@rex;margin-bottom:1*@rex;
+          height:3.7*@rex;line-height:3.7*@rex;margin-bottom:1*@rex;display:inline-block;vertical-align:top;width:20%;font-size:2.6*@rex;text-align:center;
           span{
             &.rt{
               color:@gray;font-size:2*@rex;
@@ -174,9 +191,9 @@ div.container{
           }
         }
         div.progress-container{
-          height:3.7*@rex;line-height:3.7*@rex;
+          height:3.7*@rex;line-height:3.7*@rex;display:inline-block;width:75%;margin-top:-.2em;
           div.progress-bg{
-            height:2*@rex;width:47*@rex;background: @progressBg;position:relative;top:.9*@rex;
+            height:2*@rex;width:70%;background: @progressBg;position:relative;top:.9*@rex;margin-left:0;
           }
           div.progress{
             height:2*@rex;width:0;background-image:linear-gradient(-270deg,#2A6FFF,#55C2FF);
