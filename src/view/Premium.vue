@@ -7,8 +7,12 @@
         <h2><i></i>当月标保</h2>
         <ul>
           <li v-for="(val,index) in premium_m">
-            <h2><span class="lf">{{val.name}}</span><span class="rt" @click="to_detail(val.affiliation_company,val.name)">详情></span></h2>
+            <h2>
+              <!-- <span class="lf">{{val.name}}</span> -->
+              <span class="rt" @click="to_detail(val.affiliation_company,val.name)">详情></span>
+            </h2>
             <div class="progress-container">
+              <span>{{val.name}}</span>
               <div class="progress-bg lf">
                 <div class="progress" :style="calcWidth(val.m_criterion_premium)"></div>
               </div>
@@ -23,8 +27,12 @@
         <h2><i></i>当年标保</h2>
         <ul>
           <li v-for="(val,index) in premium_y">
-            <h2><span class="lf">{{val.name}}</span><span class="rt" @click="to_detail(val.affiliation_company,val.name)">详情></span></h2>
+            <h2>
+              <!-- <span class="lf">{{val.name}}</span> -->
+              <span class="rt" @click="to_detail(val.affiliation_company,val.name)">详情></span>
+            </h2>
             <div class="progress-container">
+              <span>{{val.name}}</span>
               <div class="progress-bg lf">
                 <div class="progress" :style="calcWidth(val.y_criterion_premium)"></div>
               </div>
@@ -154,14 +162,14 @@ div.container{
     ul{
       
       li{
-        font-size:2.4*@rex;height:14.2*@rex;box-shadow:0 1.2*@rex 2*@rex 0 rgba(0,0,0,0.07);margin-bottom:5*@rex;padding-top:3.5*@rex;border-radius:.9*@rex;
+        font-size:2.4*@rex;height:16.2*@rex;box-shadow:0 1.2*@rex 2*@rex 0 rgba(0,0,0,0.07);margin-bottom:5*@rex;padding-top:3.5*@rex;border-radius:.9*@rex;
 
         span{
           display:inline-block;width:20%;text-align: center;
         }
         .lf{margin-left:4*@rex;}
         h2{
-          height:3.7*@rex;line-height:3.7*@rex;margin-bottom:0;
+          height:3.7*@rex;line-height:3.7*@rex;margin-bottom:.5em;
           span{
             &.rt{
               color:@gray;font-size:2*@rex;
@@ -173,8 +181,11 @@ div.container{
         }
         div.progress-container{
           height:3.7*@rex;line-height:3.7*@rex;
+          span{
+            float: left;width:20%;
+          }
           div.progress-bg{
-            height:2*@rex;width:47*@rex;background: @progressBg;position:relative;top:.9*@rex;
+            height:2*@rex;width:54%;background: @progressBg;position:relative;top:.9*@rex;margin-left: 0;
           }
           div.progress{
             height:2*@rex;width:0;background-image:linear-gradient(-270deg,#2A6FFF,#55C2FF);

@@ -23,7 +23,7 @@
         <h2><i></i>当年标保</h2>
         <ul>
           <li v-for="(val,index) in get_premium_org_y" :key="$route.params.name+String(index)">
-            <h2><span class="lf">{{val.org}}</span></h2>
+            <h2>{{val.org}}</h2>
             <div class="progress-container">
               <div class="progress-bg lf">
                 <div class="progress" :style="calcWidth(val.y_criterion_premium)"></div>
