@@ -1,7 +1,7 @@
 <template>
     <div class="container animated bounceInUp">
       <div class="con">
-        <h2><i></i>年度13月继续率行业前三</h2>
+        <h2><i></i>年度13月继续率前三公司</h2>
         <ul>
           <li class="title">
             <span>排名</span>
@@ -21,7 +21,7 @@
 
 
       <div class="con">
-        <h2><i></i>年度25月继续率行业前三</h2>
+        <h2><i></i>年度25月继续率前三公司</h2>
         <ul>
           <li class="title">
             <span>排名</span>

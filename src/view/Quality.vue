@@ -4,7 +4,7 @@
       <SelectC :opts="selectList" @change="changeYear" :value="yearOrMonth" @changeD="changeDate"></SelectC>
 
       <div class="con animated flipInX">
-        <h2><i></i>{{yearOrMonth=='月度'?'当月':'当年'}}13月保费继续率</h2>
+        <h2><i></i>{{yearOrMonth=='月度'?'当月':'当年'}}保险公司13月保费继续率排</h2>
         <ul>
           <li v-for="(val,index) in continue_rate_13" :key="String(index)">
             <h2>{{val.name}}</h2>
@@ -20,7 +20,7 @@
       </div>
       
       <div class="con animated flipInX">
-        <h2><i></i>{{yearOrMonth=='月度'?'当月':'当年'}}25月保费继续率</h2>
+        <h2><i></i>{{yearOrMonth=='月度'?'当月':'当年'}}保险公司25月保费继续率排</h2>
         <ul>
           <li v-for="(val,index) in continue_rate_25" :key="String(index)">
             <h2>{{val.name}}</h2>

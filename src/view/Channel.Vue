@@ -3,7 +3,7 @@
       <!-- <HeaderCommon>渠道分析</HeaderCommon> -->
       <SelectC :opts="selectList" @change="changeCompany" :value="companyName" @changeD="changeDate"></SelectC>
       <div class="con animated flipInX">
-        <h2><i></i>当月标保</h2>
+        <h2><i></i>当月标保前三渠道</h2>
         <ul>
           <li v-for="(val,index) in sales_channel_m">
             <h2>{{val.channel_name}}</h2>
@@ -17,7 +17,7 @@
         <i>单位：万元</i>
       </div>
       <div class="con animated flipInX">
-        <h2><i></i>当年标保</h2>
+        <h2><i></i>当年标保前三渠道</h2>
         <ul>
           <li v-for="(val,index) in sales_channel_y">
             <h2>{{val.channel_name}}</h2>
@@ -158,7 +158,7 @@ div.container{
       li{
         font-size:2.6*@rex;height:3.8*@rex;float: left;border-top:1px solid #eee;width:33%;text-align:center;position:relative;
         h2{
-          height:3.7*@rex;line-height:3.7*@rex;font-weight:400;
+          height:3.7*@rex;line-height:3.7*@rex;font-weight:400; font-size:2.2*@rex;
         }
         div.progress-container{
           height:3.7*@rex;line-height:3.7*@rex;position:absolute;top:-40*@rex;height:40*@rex;width:100%;

@@ -1,7 +1,7 @@
 <template>
     <div class="container animated bounceInUp">
       <div class="con">
-        <h2><i></i>当月重疾前三</h2>
+        <h2><i></i>当月重疾前三产品</h2>
         <ul>
           <li class="title">
             <span>排名</span>
@@ -21,7 +21,7 @@
 
 
       <div class="con">
-        <h2><i></i>当月年金前三</h2>
+        <h2><i></i>当月年金前三产品</h2>
         <ul>
           <li class="title">
             <span>排名</span>
@@ -40,7 +40,7 @@
       </div>
 
       <div class="con">
-        <h2><i></i>当月终身寿前三</h2>
+        <h2><i></i>当月终身寿前三产品</h2>
         <ul>
           <li class="title">
             <span>排名</span>

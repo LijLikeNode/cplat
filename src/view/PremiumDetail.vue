@@ -4,7 +4,7 @@
       <SelectC :opts="selectList" @change="changeYear" :value="yearOrMonth" @changeD="changeDate"></SelectC>
 
       <div class="con" v-if="yearOrMonth=='月度'">
-        <h2><i></i>当月标保</h2>
+        <h2><i></i>当月机构标保排名</h2>
         <ul>
           <li v-for="(val,index) in premium_org_m" :key="$route.params.name+String(index)">
             <h2>{{val.org}}</h2>
@@ -20,7 +20,7 @@
       </div>
       
       <div class="con" v-if="yearOrMonth=='年度'">
-        <h2><i></i>当年标保</h2>
+        <h2><i></i>当年机构标保排名</h2>
         <ul>
           <li v-for="(val,index) in get_premium_org_y" :key="$route.params.name+String(index)">
             <h2>{{val.org}}</h2>

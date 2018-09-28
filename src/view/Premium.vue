@@ -4,7 +4,7 @@
       <SelectC :opts="selectList" @change="changeYear" :value="yearOrMonth" @changeD="changeDate"></SelectC>
 
       <div class="con animated flipInX" v-if="yearOrMonth=='月度'">
-        <h2><i></i>当月标保</h2>
+        <h2><i></i>当月保险公司标保排名</h2>
         <ul>
           <li v-for="(val,index) in premium_m">
             <h2>
@@ -24,7 +24,7 @@
       </div>
       
       <div class="con animated flipInY" v-if="yearOrMonth=='年度'">
-        <h2><i></i>当年标保</h2>
+        <h2><i></i>当年保险公司标保排名</h2>
         <ul>
           <li v-for="(val,index) in premium_y">
             <h2>

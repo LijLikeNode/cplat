@@ -2,13 +2,13 @@
     <div class="container page">
       <!-- <HeaderCommon>产品分析</HeaderCommon> -->
       <ol class="tab">
-        <li :class="[{'active':tab_index==0}]" @click="evn(0)">公司</li>
-        <li :class="[{'active':tab_index==1}]" @click="evn(1)">险种</li>
+        <li :class="[{'active':tab_index==0}]" @click="evn(0)">按公司</li>
+        <li :class="[{'active':tab_index==1}]" @click="evn(1)">按险种</li>
       </ol>
       <div v-if="tab_index==0">
         <SelectC :opts="selectList" @change="changeCompany" :value="companyName" @changeD="changeDate"></SelectC>
         <div class="con animated flipInX">
-          <h2><i></i>当月标保</h2>
+          <h2><i></i>当月标保前三产品</h2>
           <ul>
             <li v-for="(val,index) in sales_product_company">
               <h2>{{val.product_name}}</h2>
@@ -43,7 +43,7 @@
       <div v-if="tab_index==1">
         <SelectC :opts="illList" @change="changeIll" :value="illName" @changeD="changeDate"></SelectC>
         <div class="con animated flipInY">
-          <h2><i></i>当月标保</h2>
+          <h2><i></i>当月产品标保排名</h2>
           <ol class="exhibition">
             <li v-for="(val,index) in sales_product_type">
               <h2><span class="lf">{{val.product_name}}</span></h2>

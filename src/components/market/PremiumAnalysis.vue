@@ -6,7 +6,7 @@
         </div>
       </div>
       <div class="con">
-        <h2><i></i>当月标保前三</h2>
+        <h2><i></i>当月标保前三公司</h2>
         <ul>
           <li class="title">
             <span>排名</span>
@@ -24,7 +24,7 @@
 
 
       <div class="con">
-        <h2><i></i>当年标保前三</h2>
+        <h2><i></i>当年标保前三公司</h2>
         <ul>
           <li class="title">
             <span>排名</span>
